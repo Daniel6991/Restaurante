@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @registro.nombre %>
+</p>
+
+<p>
+  <strong>Correo:</strong>
+  <%= @registro.correo %>
+</p>
+
+<p>
+  <strong>Cargo:</strong>
+  <%= @registro.cargo %>
+</p>
+<body style="background-color:#85C1E9;">
+    
+  </body>
+<%= link_to 'Editar', edit_registro_path(@registro) %> |
+<%= link_to 'Regresar', registros_path %>

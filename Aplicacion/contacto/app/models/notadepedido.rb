@@ -1,0 +1,2 @@
+class Notadepedido < ApplicationRecord
+end

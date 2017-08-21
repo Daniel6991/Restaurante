@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre_cliente: MyString
+  mesa: 1
+  platos: MyText
+  precios: 1.5
+  fecha: 2017-08-21 08:37:00
+
+two:
+  nombre_cliente: MyString
+  mesa: 1
+  platos: MyText
+  precios: 1.5
+  fecha: 2017-08-21 08:37:00

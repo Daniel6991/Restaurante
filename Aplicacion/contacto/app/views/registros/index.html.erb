@@ -1,0 +1,44 @@
+
+<p id="notice"><%= notice %></p>
+<h1 align="center">Waa Paisano</h1>
+<h3 align="center">Pescados y Mariscos</h3>
+<h4 align="center">Iniciar sesion</h4>
+<div align="center">
+<%= form_for(:session, url: login_path ) do |f| %>
+  Correo: <%= f.email_field :email %> <br>
+  Contraseña: <%= f.password_field :password %> <br>
+  <%= f.submit "Iniciar sesion"  %>
+<% end %>
+</div>
+<table BORDER=3 CELLPADDING=12>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Correo</th>
+      <th>Cargo</th>
+      <th colspan="3">Adicionales</th>
+    </tr>
+  </thead>
+  <body style="background-color:#85C1E9;">
+    
+  </body>
+  <tbody>
+    <% @registros.each do |registro| %>
+      <tr>
+        <td><%= registro.nombre %></td>
+        <td><%= registro.correo %></td>
+        <td><%= registro.cargo %></td>
+        <td><%= link_to 'Mostrar Datos', registro %></td>
+        <td><%= link_to 'Editar Datos', edit_registro_path(registro) %></td>
+        <td><%= link_to 'Eliminar Datos', registro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo Registro de Trabajador', new_registro_path %>
+<br>
+<br>
+<a href="notadepedidos">Mostrar Ordenes de Pedido</a>

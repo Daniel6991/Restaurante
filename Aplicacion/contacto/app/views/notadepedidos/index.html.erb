@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1 align="center">Mostrando Ordenes de Pedido</h1>
+
+<table BORDER=3 CELLPADDING=12>
+  <thead>
+    <tr>
+      <th>Nombre cliente</th>
+      <th>Mesa</th>
+      <th>Platos</th>
+      <th>Precios</th>
+      <th>Fecha</th>
+      <th colspan="3">Adicionales</th>
+    </tr>
+  </thead>
+<body style="background-color:#85C1E9;">
+    
+  </body>
+  <tbody>
+    <% @notadepedidos.each do |notadepedido| %>
+      <tr>
+        <td><%= notadepedido.nombre_cliente %></td>
+        <td><%= notadepedido.mesa %></td>
+        <td><%= notadepedido.platos %></td>
+        <td><%= notadepedido.precios %></td>
+        <td><%= notadepedido.fecha %></td>
+        <td><%= link_to 'Mostrar Datos Completos', notadepedido %></td>
+        <td><%= link_to 'Editar Nota de Pedido', edit_notadepedido_path(notadepedido) %></td>
+        <td><%= link_to 'Eliminar Nota de Pedido', notadepedido, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Ingresar nuevo Pedido', new_notadepedido_path %>
+<a href="registros">Regresar a Inicio de Sistema</a>

@@ -1,0 +1,44 @@
+<%= form_for(notadepedido) do |f| %>
+  <% if notadepedido.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(notadepedido.errors.count, "error") %> prohibited this notadepedido from being saved:</h2>
+
+      <ul>
+      <% notadepedido.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<body style="background-color:#85C1E9;">
+    
+  </body>
+  <div class="field">
+    <%= f.label :nombre_cliente %>
+    <%= f.text_field :nombre_cliente %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mesa %>
+    <%= f.number_field :mesa %>
+  </div>
+
+  <div class="field">
+    <%= f.label :platos %>
+    <%= f.text_area :platos %>
+  </div>
+
+  <div class="field">
+    <%= f.label :precios %>
+    <%= f.text_field :precios %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fecha %>
+    <%= f.datetime_select :fecha %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Registrar Nota de Pedido"%>
+  </div>
+<% end %>

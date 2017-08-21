@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1 align="center">Mostrando Ordenes de Pedido</h1>
+<table align="center" >
+  <thead >
+    <tr >
+      <th>Platos</th>
+      <th>Precios</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @libreta.each do |libretum| %>
+      <tr>
+        <td><%= libretum.nombre %></td>
+        <td><%= libretum.edad %></td>
+        <td><%= link_to 'Mostrar Datos', libretum %></td>
+        <td><%= link_to 'Editar Datos', edit_libretum_path(libretum) %></td>
+        <td><%= link_to 'Eliminar Datos', libretum, method: :delete, data: { confirm: '¿Estas seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo Orden de Pedido', new_libretum_path %>
+<br>
+<br>
+<a href="registros">Regresar a Inicio de Sistema</a>

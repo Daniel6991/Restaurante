@@ -1,0 +1,2 @@
+class Libretum < ApplicationRecord
+end

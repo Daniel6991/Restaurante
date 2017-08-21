@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+<body style="background-color:#85C1E9;">
+    
+  </body>
+<p>
+  <strong>Nombre cliente:</strong>
+  <%= @notadepedido.nombre_cliente %>
+</p>
+
+<p>
+  <strong>Mesa:</strong>
+  <%= @notadepedido.mesa %>
+</p>
+
+<p>
+  <strong>Platos:</strong>
+  <%= @notadepedido.platos %>
+</p>
+
+<p>
+  <strong>Precios:</strong>
+  <%= @notadepedido.precios %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @notadepedido.fecha %>
+</p>
+
+<%= link_to 'Editar Nota de Pedido', edit_notadepedido_path(@notadepedido) %> |
+<%= link_to 'Regresar', notadepedidos_path %>
